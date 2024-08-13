@@ -1,0 +1,224 @@
+body {
+    margin :0;
+    padding:0;
+}
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+/* styling the quiz app */
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quiz-container {
+   
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+}
+
+.heading{
+    text-align: center;
+}
+
+.quiz-container>.innerContainer{
+     margin-top: 10px;
+     background-color: #1e1eee;
+    margin:30px 0;
+    padding: 4px;
+    border-top: 10px solid black;
+    border-radius: 7px;
+    outline: 3px solid #abaac3;
+}
+
+
+.quiz-container > .innerContainer:nth-of-type(3){
+    /* Your styles here */
+ padding: 10px;
+}
+
+/* styling the timer */
+#timer {
+    width: 50px;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #060505;
+    color: #1e1eee;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#timer.warning {
+    background-color: #ffcccc;
+    color: #ff0000;
+}
+
+.optionList{
+    padding-inline-start: 0;
+}
+
+.option {cursor: pointer;
+         font-size: 20px;
+        padding: 10px;
+        margin: 5px 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+       
+    }
+    .option.correct {
+        border-color: green;
+    }
+    
+    .option.incorrect {
+        border-color: red;
+    }
+
+    .option:hover:not(.disabled) {
+        background-color: #f0f0f0;
+    }
+    
+    .option.disabled {
+        cursor: not-allowed;
+        opacity: 0.6;
+    }
+  
+    
+    #descriptionBox {
+        background-color: #000000;
+        border-radius: 8px;
+        padding: 15px;
+        margin: 20px 20px;
+        box-shadow: 0 2px 5px rgba(12, 10, 10, 0.1);
+        transition: all 0.3s ease;
+    }
+    
+    #descriptionBox span {
+        display: inline-block;
+        background-color: #1309ce;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 4px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    
+    #description {
+        font-size: 16px;
+        line-height: 1.2;
+        color: #3a52ec;
+      
+    }
+
+/* styling the next button */
+.next-button {
+    /* Basic button styling */
+    margin: 5px 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    
+    /* Colors */
+    background-color: #433f3e;  /* Green background */
+    color: white;  /* White text */
+    
+    /* Remove default button styles */
+    border: none;
+    outline: none;
+    
+    /* Rounded corners */
+    border-radius: 5px;
+    
+    /* Cursor style */
+    cursor: pointer;
+    
+    /* Transition for smooth hover effect */
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect */
+.next-button:hover {
+    background-color: #121312;  /* Darker green on hover */
+}
+
+/* Active/Click effect */
+.next-button:active {
+    background-color: #3e8e41;  /* Even darker green when clicked */
+    transform: translateY(2px);  /* Slight push down effect */
+}
+
+/* Focus style for accessibility */
+.next-button:focus {
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.5);  /* Green glow */
+}
+
+/* Styling for the final score container */
+.quiz-completion {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #134ac9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* Quiz completion heading */
+.quiz-completion h1 {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Score and percentage paragraphs */
+.quiz-completion p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+/* Highlight the percentage */
+.quiz-completion .percentage {
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+/* Restart button styling */
+#restartButton {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#restartButton:hover {
+    background-color: #45a049;
+}
