@@ -27,6 +27,7 @@ body {
     align-items: center;
 }
 
+/* styling the quiz-container */
 .quiz-container {
    
     padding: 2rem;
@@ -36,10 +37,12 @@ body {
     width: 100%;
 }
 
+/* styling the heading */
 .heading{
     text-align: center;
 }
 
+/* styling the innercontainers */
 .quiz-container>.innerContainer{
      margin-top: 10px;
      background-color: #1e1eee;
@@ -52,7 +55,6 @@ body {
 
 
 .quiz-container > .innerContainer:nth-of-type(3){
-    /* Your styles here */
  padding: 10px;
 }
 
@@ -76,10 +78,12 @@ body {
     color: #ff0000;
 }
 
+/* styling the optionList */
 .optionList{
     padding-inline-start: 0;
 }
 
+/* styling the options */
 .option {cursor: pointer;
          font-size: 20px;
         padding: 10px;
@@ -106,7 +110,7 @@ body {
         opacity: 0.6;
     }
   
-    
+    /* styling the descriptionBox */
     #descriptionBox {
         background-color: #000000;
         border-radius: 8px;
